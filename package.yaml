@@ -1,0 +1,45 @@
+Name:           gtkglext
+Version:        0.13.1.1
+License:        LGPL-2.1
+License-file:   COPYING
+Copyright:      (c) 2001-2010 The Gtk2Hs Team
+Author:         Duncan Coutts
+Maintainer:     gtk2hs-users@lists.sourceforge.net
+Stability:      provisional
+homepage:       http://projects.haskell.org/gtk2hs/
+bug-reports:    http://hackage.haskell.org/trac/gtk2hs/
+Synopsis:       Binding to the GTK+ OpenGL Extension
+Description:    GtkGLExt provides the GDK objects to support OpenGL rendering in GTK+,
+                and GtkWidget API add-ons to make GTK+ widgets OpenGL-capable.
+
+Category:       Graphics
+Tested-With:    GHC == 6.10.4, GHC == 6.12.3, GHC == 7.0.4, GHC == 7.2.1
+Build-Type:     Custom
+
+custom-setup:
+  setup-depends: 
+    - base
+    - Cabal
+    - gtk2hs-buildtools
+
+library:
+  dependencies:
+    - base
+    - glib
+    - pango
+    - gtk
+
+  exposed-modules:
+    - Graphics.UI.Gtk.OpenGL
+    - Graphics.UI.Gtk.OpenGL.Config
+    - Graphics.UI.Gtk.OpenGL.Context
+    - Graphics.UI.Gtk.OpenGL.Drawable
+    - Graphics.UI.Gtk.OpenGL.DrawingArea
+    - Graphics.UI.Gtk.OpenGL.General
+    - Graphics.UI.Gtk.OpenGL.Pixmap
+    - Graphics.UI.Gtk.OpenGL.Window
+  other-modules:
+    - Graphics.UI.Gtk.OpenGL.Types
+
+  pkgconfig-depends: gtkglext-1.0
+

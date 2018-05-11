@@ -1,0 +1,15 @@
+resolver: lts-11.8
+
+packages:
+- '.'
+
+extra-deps:
+  - gtk-0.14.9
+  - gio-0.13.5.0
+    
+flags: {}
+
+extra-package-dbs: []
+
+
+
